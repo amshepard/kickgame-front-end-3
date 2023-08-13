@@ -38,6 +38,7 @@ function KickDetails() {
     axios
       .get(`${API}/kicks/${id}`)
       .then((response) => {
+        console.log("API Response:", response.data); // Log the response data
         // Set the retrieved kick data to the 'kick' state
         setKick(response.data);
       })
